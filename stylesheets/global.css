@@ -1,0 +1,236 @@
+@font-face {
+    font-family: 'metropolis';
+    src: url('../public/fonts/metropolis-regular-webfont.woff2') format('woff2'),
+    url('../public/fonts/metropolis-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'metropolis';
+    src: url('../public/fonts/metropolis-medium-webfont.woff2') format('woff2'),
+    url('../public/fonts/metropolis-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'metropolis';
+    src: url('../public/fonts/metropolis-semibold-webfont.woff2') format('woff2'),
+    url('../public/fonts/metropolis-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'metropolis';
+    src: url('../public/fonts/metropolis-bold-webfont.woff2') format('woff2'),
+    url('../public/fonts/metropolis-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'metropolis';
+    src: url('../public/fonts/metropolis-extrabold-webfont.woff2') format('woff2'),
+    url('../public/fonts/metropolis-extrabold-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'metropolis';
+    src: url('../public/fonts/metropolis-black-webfont.woff2') format('woff2'),
+    url('../public/fonts/metropolis-black-webfont.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --color-1: #071840;
+
+    --color-2: white;
+    --color-2-dimmed: #fdfdff;
+    --color-2-darker: #E5ECF9;
+    --color-2-dark: #5B6F8C;
+
+    --color-3-light: #F4F8FE;
+    --color-3-lighter: #E5F6FF;
+    --color-3: #0252fc;
+
+    --color-4-light: #FFE5EE;
+    --color-4: #FF0055;
+
+    --color-5-light: #E5FFF8;
+    --color-5-lighter: #DAFCC9;
+    --color-5: #36d9d8;
+
+    --color-6: #7C4DFF;
+    --color-6-opacity: rgba(124, 77, 2500, 0.2);
+
+    --color-7: #448AFF;
+    --color-7-opacity: rgba(68, 138, 255, 0.2);
+
+    --color-8: #00BCD4;
+    --color-8-opacity: rgba(0, 188, 212, 0.2);
+
+    --color-9: #1DE9B6;
+    --color-9-opacity: rgba(29, 233, 182, 0.2);
+
+    --color-10-lighter: #fff1ea;
+    --color-10: #fea686;
+
+    --max-width: 135rem;
+    --sidebar-width: 22rem;
+    --panel-width: 28rem;
+    --border-radius: 7px;
+    --shadow: var(--color-2-darker) 0 5px 20px 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 50%;
+}
+
+body {
+    position: relative;
+    display: block;
+    margin: 0;
+    background-color: var(--color-2-dimmed);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 1.6rem;
+    color: var(--color-1);
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    font-family: 'metropolis', sans-serif;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+main {
+    width: 100%;
+    max-width: var(--max-width);
+    display: block;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 2.5rem 2rem;
+    /*overflow: hidden;*/
+}
+
+button,
+input {
+    border: none;
+    background: none;
+    font-size: unset;
+}
+
+h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 3.5rem;
+}
+
+h2 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+h3 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+h4 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-2-dark);
+}
+
+h5 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--color-2-dark);
+}
+
+h6 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid var(--color-2-darker);
+}
+
+a {
+    background-color: transparent;
+    transition: color 0.2s;
+    text-decoration: none;
+    color: var(--color-1);
+}
+
+a:active,
+a:focus {
+    color: var(--color-1);
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+nav {
+    padding: 0 2rem;
+}
+
+img {
+    border-style: none;
+}
+
+p {
+    line-height: 1.4;
+    color: var(--color-2-dark);
+}
+
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+@media screen and (min-width: 350px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    html {
+        font-size: 62.5%;
+    }
+
+    main {
+        padding: 2.5rem 4rem 4rem 4rem;
+    }
+
+    nav {
+        padding: 0 4rem;
+    }
+}

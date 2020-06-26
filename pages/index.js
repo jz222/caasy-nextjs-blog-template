@@ -7,7 +7,14 @@ import Post from '../components/post/Post';
 const Home = ({ posts }) => (
     <Main>
         {(posts || []).map(post => (
-            <Post key={post.id} title={post.title} previewImage={post?.previewImageUrls?.medium || ''} lastEdit={post.updatedAt} />
+            <Post
+                key={post.id}
+                id={post.id}
+                title={post.title}
+                previewText={''}
+                previewImage={post?.previewImageUrls?.medium || ''}
+                lastEdit={post.updatedAt}
+            />
         ))}
     </Main>
 );
@@ -16,7 +23,6 @@ export default Home;
 
 export const getStaticProps = async (ctx) => {
     const currentPage = ctx?.params?.currentPage || '1';
-    
     const posts = await caasy.posts.getAll(currentPage);
     
     return { props: { posts: posts.data || [] } };

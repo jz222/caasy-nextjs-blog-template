@@ -1,16 +1,21 @@
+.wrapper {
+    display: block;
+    margin-bottom: 4rem;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
 .post {
     width: 100%;
     max-width: 65rem;
-    margin: 0 auto 4rem auto;
+    margin: 0 auto;
     border-radius: var(--border-radius);
     background-color: var(--color-2);
     box-shadow: var(--shadow);
     overflow: hidden;
     cursor: pointer;
-
-    &:last-of-type {
-        margin: 0 auto;
-    }
 }
 
 .header {

@@ -5,11 +5,18 @@ import Main from '../../components/layout/main/Main';
 
 import styling from './Post.module.scss';
 
-const Post = ({ title }) => {
+const Post = (post) => {
     return (
-        <Main title={title}>
-            <div>
+        <Main title={post.title}>
+            <div className={styling.header}>
+                <img src={post?.previewImageUrls?.medium || ''} className={styling.heroBackground} alt='hero background' />
             </div>
+            
+            <article className={styling.elements}>
+                <img src={post?.previewImageUrls?.large || ''} className={styling.hero} alt='hero' />
+            </article>
+            
+            
         </Main>
     );
 };

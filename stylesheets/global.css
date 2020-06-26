@@ -88,6 +88,7 @@
 
     --max-width: 135rem;
     --sidebar-width: 22rem;
+    --navbar-height: 8rem;
     --panel-width: 28rem;
     --border-radius: 7px;
     --shadow: var(--color-2-darker) 0 5px 20px 0;
@@ -124,7 +125,7 @@ main {
     max-width: var(--max-width);
     display: block;
     margin: 0 auto;
-    padding: 2.5rem 2rem 2.5rem 2rem;
+    padding: calc(var(--navbar-height) + 2.5rem) 2rem 2.5rem 2rem;
     /*overflow: hidden;*/
 }
 
@@ -227,7 +228,7 @@ li {
     }
 
     main {
-        padding: 2.5rem 4rem 4rem 4rem;
+        padding: calc(var(--navbar-height) + 4rem) 4rem 4rem 4rem;
     }
 
     nav {

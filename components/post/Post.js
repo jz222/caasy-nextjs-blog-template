@@ -1,5 +1,7 @@
 import React from 'react';
 
+import formatTimestamp from '../../utils/formatTimestamp';
+
 import styling from './Post.module.scss';
 
 const Post = ({ previewImage, title, lastEdit, previewText }) => (
@@ -9,7 +11,7 @@ const Post = ({ previewImage, title, lastEdit, previewText }) => (
         <div className={styling.content}>
             <h2>{title}</h2>
             
-            <span>Last edit: {lastEdit}</span>
+            <span>Last edit: {formatTimestamp(lastEdit)}</span>
             
             <p>{previewText}</p>
         </div>

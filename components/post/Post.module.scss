@@ -1,13 +1,16 @@
 .post {
     width: 100%;
     max-width: 65rem;
-    min-height: 35rem;
-    margin: 0 auto;
+    margin: 0 auto 4rem auto;
     border-radius: var(--border-radius);
     background-color: var(--color-2);
     box-shadow: var(--shadow);
     overflow: hidden;
     cursor: pointer;
+
+    &:last-of-type {
+        margin: 0 auto;
+    }
 }
 
 .header {

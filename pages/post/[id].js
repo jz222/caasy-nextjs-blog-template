@@ -3,23 +3,38 @@ import caasy from '@caasy/sdk-js';
 
 import Main from '../../components/layout/main/Main';
 
+import elements from '../../components/elements/index';
+import config from '../../config/';
+
 import styling from './Post.module.scss';
 
-const Post = (post) => {
-    return (
-        <Main title={post.title}>
-            <div className={styling.header}>
-                <img src={post?.previewImageUrls?.medium || ''} className={styling.heroBackground} alt='hero background' />
+const Post = (post) => (
+    <Main title={post.title[config.locale]}>
+        <div className={styling.header} hidden={!post.previewImageUrls}>
+            <img
+                src={post?.previewImageUrls?.medium || ''}
+                className={styling.previewImageBackground}
+                alt='preview image background'
+            />
+        </div>
+        
+        <article className={styling.elements}>
+            <img
+                src={post?.previewImageUrls?.large || ''}
+                className={styling.previewImage}
+                alt='preview image'
+                hidden={!post.previewImageUrls}
+            />
+            
+            <div className={styling.wrapper}>
+                {post?.elements.map(element => {
+                    const Element = elements[element.type] || (() => null);
+                    return <Element {...element} key={element.id} />;
+                })}
             </div>
-            
-            <article className={styling.elements}>
-                <img src={post?.previewImageUrls?.large || ''} className={styling.hero} alt='hero' />
-            </article>
-            
-            
-        </Main>
-    );
-};
+        </article>
+    </Main>
+);
 
 export default Post;
 

@@ -3,9 +3,11 @@ import Link from 'next/link';
 
 import formatTimestamp from '../../utils/formatTimestamp';
 
-import styling from './Post.module.scss';
+import config from '../../config/';
 
-const Post = ({ id, previewImage, title, lastEdit, previewText }) => {
+import styling from './PostPreview.module.scss';
+
+const PostPreview = ({ id, previewImage, title, lastEdit, previewText }) => {
     const [lastEditDate, setLastEditDate] = useState('');
     
     useEffect(() => {
@@ -16,15 +18,16 @@ const Post = ({ id, previewImage, title, lastEdit, previewText }) => {
         <Link href='/post/[id]' as={'/post/' + id}>
             <a className={styling.wrapper}>
                 <article className={styling.post}>
-                    <div className={styling.header} style={{ backgroundImage: `url("${previewImage}")` }}
-                         hidden={!previewImage} />
+                    <div
+                        className={styling.header}
+                        style={{ backgroundImage: `url("${previewImage}")` }}
+                        hidden={!previewImage}
+                    />
                     
                     <div className={styling.content}>
-                        <h2>{title}</h2>
-                        
+                        <h2>{title[config.locale]}</h2>
+                        <p>{previewText[config.locale]}</p>
                         <div>Last edit: {lastEditDate}</div>
-                        
-                        <p>{previewText}</p>
                     </div>
                 </article>
             </a>
@@ -32,4 +35,4 @@ const Post = ({ id, previewImage, title, lastEdit, previewText }) => {
     );
 };
 
-export default Post;
+export default PostPreview;

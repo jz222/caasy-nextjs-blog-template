@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 2.5rem;
+}
+
+.nested {
+    margin-right: 4rem;
+    margin-bottom: 2.5rem;
+
+    &:last-of-type {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .nested {
+        margin-bottom: 0;
+    }
+
+    .container {
+        flex-direction: row;
+    }
+}

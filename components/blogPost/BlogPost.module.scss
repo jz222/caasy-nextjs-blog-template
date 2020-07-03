@@ -14,7 +14,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, var(--color-2-dimmed) 70%);
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, var(--color-2-dimmed) 70%);
         z-index: 9;
     }
 }
@@ -48,6 +48,12 @@
 .wrapper {
     width: 100%;
     margin: 0 auto;
+}
+
+.lastEdit {
+    display: block;
+    margin: 4rem 0;
+    color: var(--color-2-dark);
 }
 
 @media screen and (min-width: 768px) {

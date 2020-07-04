@@ -10,7 +10,7 @@ const getPages = (totalItems, itemsPerPage, currentPage) => {
     }
     
     if (currentPage === totalPages - 1 || currentPage === totalPages - 2 || currentPage === totalPages) {
-        return [1, '...', currentPage - 1, currentPage, totalPages];
+        return [1, '...', totalPages - 2, totalPages - 1, totalPages];
     }
     
     if (currentPage === 2 || currentPage === 3) {

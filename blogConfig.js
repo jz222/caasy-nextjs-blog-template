@@ -1,3 +1,11 @@
+/**
+ * This files contains all the meta data of your blog. Feel
+ * free to change it according to your needs. Please
+ * keep in mind, that the actual blog posts are fetched
+ * from the Caasy API. This file only contains static
+ * information that does not change such as the name
+ * of the blog.
+ */
 export default {
     blogName: 'myBlog',
     defaultTitle: 'my personal tech blog',

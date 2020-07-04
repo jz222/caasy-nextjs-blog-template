@@ -3,8 +3,11 @@ import caasy from '@caasy/sdk-js';
 
 import Main from '../components/layout/main/Main';
 import PostPreview from '../components/postPreview/PostPreview';
+import PageControls from '../components/pageControls/PageControls';
 
-const Home = ({ posts }) => (
+import utils from '../utils/';
+
+const Home = ({ posts, pageControls, currentPage }) => (
     <Main>
         {(posts || []).map(post => (
             <PostPreview
@@ -16,14 +19,17 @@ const Home = ({ posts }) => (
                 lastEdit={post.updatedAt}
             />
         ))}
+        
+        <PageControls data={pageControls} active={currentPage} />
     </Main>
 );
 
 export default Home;
 
 export const getStaticProps = async (ctx) => {
-    const currentPage = ctx?.params?.currentPage || '1';
+    const currentPage = +(ctx?.params?.currentPage || '1');
     const posts = await caasy.posts.getAll(currentPage);
+    const pageControls = utils.getPages(posts.totalItems, posts.itemsPerPage, currentPage) || [];
     
-    return { props: { posts: posts.data || [] } };
+    return { props: { posts: posts.data || [], pageControls, currentPage } };
 };

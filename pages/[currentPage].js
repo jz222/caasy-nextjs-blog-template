@@ -6,12 +6,16 @@ export default Index;
 export { getStaticProps };
 
 export const getStaticPaths = async () => {
-    const allPosts = await caasy.posts.getAll();
-    const totalPages = Math.ceil((allPosts.total || 0) / 5);
+    const data = await caasy.posts.getAll();
+    const totalPages = Math.ceil((data.totalItems || 0) / 5);
     const paths = [];
     
     for (let i = 0; i <= totalPages; i++) {
-        paths.push({ params: { currentPage: i.toString() } });
+        paths.push({
+            params: {
+                currentPage: i.toString()
+            }
+        });
     }
     
     return {

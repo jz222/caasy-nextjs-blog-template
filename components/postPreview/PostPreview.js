@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
-import formatTimestamp from '../../utils/formatTimestamp';
+import utils from '../../utils/';
 
 import config from '../../config/';
 
@@ -11,7 +11,7 @@ const PostPreview = ({ id, previewImage, title, lastEdit, previewText }) => {
     const [lastEditDate, setLastEditDate] = useState('');
     
     useEffect(() => {
-        setLastEditDate(formatTimestamp(lastEdit));
+        setLastEditDate(utils.formatTimestamp(lastEdit));
     }, [lastEdit]);
     
     return (
@@ -25,8 +25,8 @@ const PostPreview = ({ id, previewImage, title, lastEdit, previewText }) => {
                     />
                     
                     <div className={styling.content}>
-                        <h2>{title[config.locale]}</h2>
-                        <p>{previewText[config.locale]}</p>
+                        <h2>{title?.[config.locale]}</h2>
+                        <p>{previewText?.[config.locale]}</p>
                         <div>Last edit: {lastEditDate}</div>
                     </div>
                 </article>

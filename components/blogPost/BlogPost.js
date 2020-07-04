@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import Main from '../layout/main/Main';
 
-import formatTimestamp from '../../utils/formatTimestamp';
+import utils from '../../utils/';
 import elements from '../elements/index';
 import config from '../../config/index';
 
@@ -12,7 +12,7 @@ const Post = ({ post }) => {
     const [lastEdit, setLastEdit] = useState('');
     
     useEffect(() => {
-        setLastEdit(formatTimestamp(post.updatedAt));
+        setLastEdit(utils.formatTimestamp(post.updatedAt));
     }, [post.updatedAt]);
     
     return (

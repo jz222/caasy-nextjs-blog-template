@@ -127,7 +127,7 @@ main {
     max-width: var(--max-width);
     display: block;
     margin: 0 auto;
-    padding: calc(var(--navbar-height) + 2.5rem) var(--horizontal-padding) 2.5rem var(--horizontal-padding);
+    padding: calc(var(--navbar-height) + 4rem) var(--horizontal-padding) 2.5rem var(--horizontal-padding);
 }
 
 button,
@@ -232,7 +232,7 @@ li {
     }
 
     main {
-        padding: calc(var(--navbar-height) + 4rem) 4rem 4rem 4rem;
+        padding: calc(var(--navbar-height) + 5rem) 4rem 4rem 4rem;
     }
 
     nav {

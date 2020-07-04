@@ -1,15 +1,15 @@
 export default {
-    defaultTitle: 'my personal tech blog',
     blogName: 'myBlog',
+    defaultTitle: 'my personal tech blog',
     description: 'This blog showcases how to use Caasy and its official JS SDK. Please visit our website for more information. Caasy is developed and mainteined by Mosaic.',
     social: {
-        github: '',
-        dev: '',
-        twitter: '',
-        linkedin: '',
-        youtube: '',
-        facebook: '',
-        instagram: ''
+        github: 'https://github.com/jz222',
+        dev: 'https://dev.to/jz222',
+        twitter: 'https://twitter.com',
+        linkedin: 'https://www.linkedin.com/in/timo-zimmermann',
+        youtube: 'https://youtube.com',
+        facebook: 'https://facebook.com',
+        instagram: 'https://instagram.com'
     },
     footer: {
         links: [
@@ -23,7 +23,7 @@ export default {
                 title: 'Developer',
                 items: [
                     { label: 'Docs', url: 'https://docs.caasy.io' },
-                    { label: 'GitHub', url: 'https://logowl.io' },
+                    { label: 'Github', url: 'https://logowl.io' },
                     { label: 'JS SDK', url: 'https://mosaic.mc' }
                 ]
             },

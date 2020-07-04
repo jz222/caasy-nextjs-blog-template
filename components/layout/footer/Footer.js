@@ -1,5 +1,6 @@
 import React from 'react';
 
+import SocialIcons from '../../socialIcons/SocialIcons'
 import Logo from '../../logo/Logo';
 
 import blogConfig from '../../../blogConfig';
@@ -40,6 +41,7 @@ const Footer = () => (
             <div className={styling.info}>
                 <Logo />
                 <p className={styling.description}>{blogConfig.description}</p>
+                <SocialIcons />
             </div>
             
             {blogConfig.footer.links.map((links, i) => <Links key={i} {...links} />)}

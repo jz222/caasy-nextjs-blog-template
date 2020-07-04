@@ -4,6 +4,11 @@ import Logo from '../../logo/Logo';
 
 import styling from './Nav.module.scss';
 
+/**
+ * Renders the navigation bar.
+ * @returns {*}
+ * @constructor
+ */
 const Nav = () => (
     <nav className={styling.nav}>
         <div className={styling.container}>

@@ -1,14 +1,15 @@
 import React from 'react';
 import Head from 'next/head';
 
+import Footer from '../footer/Footer';
 import Nav from '../nav/Nav';
 
-import config from '../../../config';
+import blogConfig from '../../../blogConfig';
 
 const Main = ({ title, children }) => (
     <>
         <Head>
-            <title>{title || config.defaultTitle}</title>
+            <title>{blogConfig.blogName + ' | ' + (title || blogConfig.defaultTitle)}</title>
         </Head>
         
         <header>
@@ -19,7 +20,7 @@ const Main = ({ title, children }) => (
             {children}
         </main>
         
-        <footer></footer>
+        <Footer />
     </>
 );
 

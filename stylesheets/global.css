@@ -88,6 +88,7 @@
 
     --max-width: 135rem;
     --max-post-width: 90rem;
+    --horizontal-padding: 2rem;
     --sidebar-width: 22rem;
     --navbar-height: 8rem;
     --panel-width: 28rem;
@@ -126,7 +127,7 @@ main {
     max-width: var(--max-width);
     display: block;
     margin: 0 auto;
-    padding: calc(var(--navbar-height) + 2.5rem) 2rem 2.5rem 2rem;
+    padding: calc(var(--navbar-height) + 2.5rem) var(--horizontal-padding) 2.5rem var(--horizontal-padding);
 }
 
 button,

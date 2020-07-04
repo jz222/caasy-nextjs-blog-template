@@ -1,15 +1,14 @@
 import React from 'react';
-import Link from 'next/link';
+
+import Logo from '../../logo/Logo';
 
 import styling from './Nav.module.scss';
 
 const Nav = () => (
     <nav className={styling.nav}>
         <div className={styling.container}>
-            <Link href='/'>
-                <div className={styling.logo}>my<b> | BLOG</b></div>
-            </Link>
-    
+            <Logo />
+            
             <ul className={styling.menu}>
                 <li>1</li>
                 <li>1</li>

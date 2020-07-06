@@ -17,6 +17,8 @@ export const getStaticProps = async (ctx) => {
 };
 
 export const getStaticPaths = async () => {
+    caasy.init({ siteId: '5f02451de2d2ec5c88de57dc' });
+    
     const firstPageOfPosts = await caasy.posts.getAll();
     const totalPages = Math.ceil((firstPageOfPosts.total || 0) / 5);
     

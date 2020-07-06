@@ -3,12 +3,12 @@ import NProgress from 'nprogress';
 import caasy from '@caasy/sdk-js';
 import Router from 'next/router';
 
+// Blog config
+import blogConfig from '../blogConfig';
+
 // Import style sheets
 import '../stylesheets/global.css';
 import '../stylesheets/nprogress.css';
-
-// Blog config
-import blogConfig from '../blogConfig';
 
 // Initialize the Caasy SDK. Update the Caasy
 // site ID in "blogConfig.js" in the root folder.

@@ -27,6 +27,8 @@ const Home = ({ posts, pageControls, currentPage }) => (
 export default Home;
 
 export const getStaticProps = async (ctx) => {
+    caasy.init({ siteId: '5f02451de2d2ec5c88de57dc' });
+    
     const currentPage = +(ctx?.params?.currentPage || '1');
     const posts = await caasy.posts.getAll(currentPage);
     const pageControls = utils.getPages(posts.totalItems, posts.itemsPerPage, currentPage) || [];

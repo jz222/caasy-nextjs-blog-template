@@ -7,8 +7,12 @@ import Router from 'next/router';
 import '../stylesheets/global.css';
 import '../stylesheets/nprogress.css';
 
-// Initialize the Caasy SDK
-caasy.init({ mode: 'dev', siteId: '5ee4debb36189554686eb89b' });
+// Blog config
+import blogConfig from '../blogConfig';
+
+// Initialize the Caasy SDK. Update the Caasy
+// site ID in "blogConfig.js" in the root folder.
+caasy.init({ siteId: blogConfig.caasySiteId });
 
 // Loading indicator
 Router.events.on('routeChangeStart', NProgress.start);

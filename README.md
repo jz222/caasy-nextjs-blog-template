@@ -2,6 +2,10 @@
 
 This repository contains a NextJS blog template that renders all the content from Caasy - a headless content as a service. It demonstrates how to implement the official Caasy Javascript SDK.
 
+## Setup
+
+Before you start, please set your Caasy site ID in `blogConfig.js`.
+
 ## Customization
 
 ### Colors

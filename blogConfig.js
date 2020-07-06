@@ -7,7 +7,7 @@
  * of the blog.
  */
 export default {
-    caasySiteId: '5f02451de2d2ec5c88de57dc',
+    caasySiteId: '5f03234575dd3c969449d54b',
     blogName: 'myBlog',
     defaultTitle: 'my personal tech blog',
     description: 'This blog showcases how to use Caasy and its official JS SDK. Please visit our website for more information. Caasy is developed and maintained by Mosaic.',

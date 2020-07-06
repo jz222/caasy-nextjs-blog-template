@@ -2,11 +2,13 @@ import caasy from '@caasy/sdk-js';
 
 import Index, { getStaticProps } from './';
 
+import blogPost from '../blogConfig';
+
 export default Index;
 export { getStaticProps };
 
 export const getStaticPaths = async () => {
-    caasy.init({ siteId: '5f02451de2d2ec5c88de57dc' });
+    caasy.init({ siteId: blogPost.caasySiteId });
     
     const data = await caasy.posts.getAll();
     const totalPages = Math.ceil((data.totalItems || 0) / 5);

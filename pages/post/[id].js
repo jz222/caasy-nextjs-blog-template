@@ -3,6 +3,8 @@ import caasy from '@caasy/sdk-js';
 
 import BlogPost from '../../components/blogPost/BlogPost';
 
+import blogConfig from '../../blogConfig';
+
 const Post = (post) => (
     <BlogPost post={post} />
 );
@@ -17,7 +19,7 @@ export const getStaticProps = async (ctx) => {
 };
 
 export const getStaticPaths = async () => {
-    caasy.init({ siteId: '5f02451de2d2ec5c88de57dc' });
+    caasy.init({ siteId: blogConfig.caasySiteId });
     
     const firstPageOfPosts = await caasy.posts.getAll();
     const totalPages = Math.ceil((firstPageOfPosts.total || 0) / 5);

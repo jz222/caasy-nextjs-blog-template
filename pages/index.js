@@ -5,6 +5,7 @@ import Main from '../components/layout/main/Main';
 import PostPreview from '../components/postPreview/PostPreview';
 import PageControls from '../components/pageControls/PageControls';
 
+import blogConfig from '../blogConfig';
 import utils from '../utils/';
 
 const Home = ({ posts, pageControls, currentPage }) => (
@@ -27,7 +28,7 @@ const Home = ({ posts, pageControls, currentPage }) => (
 export default Home;
 
 export const getStaticProps = async (ctx) => {
-    caasy.init({ siteId: '5f02451de2d2ec5c88de57dc' });
+    caasy.init({ siteId: blogConfig.caasySiteId });
     
     const currentPage = +(ctx?.params?.currentPage || '1');
     const posts = await caasy.posts.getAll(currentPage);

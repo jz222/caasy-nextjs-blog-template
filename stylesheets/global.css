@@ -175,7 +175,7 @@ strong {
 }
 
 nav {
-    padding: 0 2rem;
+    padding: 0 var(--horizontal-padding);
 }
 
 img {
@@ -207,9 +207,5 @@ li {
 @media screen and (min-width: 992px) {
     html {
         font-size: 62.5%;
-    }
-
-    nav {
-        padding: 0 4rem;
     }
 }

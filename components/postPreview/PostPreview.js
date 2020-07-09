@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 import utils from '../../utils/';
-
 import config from '../../config/';
 
 import styling from './PostPreview.module.scss';
@@ -15,8 +14,8 @@ const PostPreview = ({ id, previewImage, title, lastEdit, previewText }) => {
     }, [lastEdit]);
     
     return (
-        <Link href='/post/[id]' as={'/post/' + id}>
-            <a className={styling.wrapper}>
+        <div className={styling.wrapper}>
+            <Link href='/post/[id]' as={'/post/' + id}>
                 <article className={styling.post}>
                     <div
                         className={styling.header}
@@ -25,13 +24,18 @@ const PostPreview = ({ id, previewImage, title, lastEdit, previewText }) => {
                     />
                     
                     <div className={styling.content}>
-                        <h2>{title?.[config.locale]}</h2>
+                        <h2>
+                            <Link href='/post/[id]' as={'/post/' + id}>
+                                <a>{title?.[config.locale]}</a>
+                            </Link>
+                        </h2>
+                        
                         <p>{previewText?.[config.locale]}</p>
                         <div>Last edit: {lastEditDate}</div>
                     </div>
                 </article>
-            </a>
-        </Link>
+            </Link>
+        </div>
     );
 };
 

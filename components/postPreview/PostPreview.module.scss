@@ -14,8 +14,14 @@
     border-radius: var(--border-radius);
     background-color: var(--color-2);
     box-shadow: var(--shadow);
+    transition: box-shadow 0.4s, transform 0.2s;
     overflow: hidden;
     cursor: pointer;
+
+    &:hover {
+        transform: scale(1.002);
+        box-shadow: var(--shadow-stronger);
+    }
 }
 
 .header {

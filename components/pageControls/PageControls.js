@@ -16,12 +16,12 @@ const PageControls = ({ data, active }) => (
         <ul>
             {(data || []).map((page, i) => {
                 if (page === '...') {
-                    return <div className={styling.placeholder} key={i}>...</div>;
+                    return <li className={styling.placeholder} key={i}>...</li>;
                 }
                 
                 return (
                     <Link href={'/' + page} key={i}>
-                        <div className={page === active ? styling.active : styling.page}>{page}</div>
+                        <li className={page === active ? styling.active : styling.page}>{page}</li>
                     </Link>
                 );
             })}

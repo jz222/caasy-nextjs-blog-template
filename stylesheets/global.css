@@ -69,7 +69,9 @@
     --horizontal-padding: 2rem;
     --navbar-height: 8rem;
     --border-radius: 15px;
+
     --shadow: var(--color-2-darker) 0 5px 20px 0;
+    --shadow-stronger: var(--color-2-darker) 0 15px 18px 0;
 }
 
 html {
@@ -205,10 +207,6 @@ li {
 @media screen and (min-width: 992px) {
     html {
         font-size: 62.5%;
-    }
-
-    main {
-        padding: calc(var(--navbar-height) + 5rem) 4rem 4rem 4rem;
     }
 
     nav {

@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import NProgress from 'nprogress';
 import caasy from '@caasy/sdk-js';
 import Router from 'next/router';
@@ -20,7 +21,13 @@ Router.events.on('routeChangeComplete', NProgress.done);
 Router.events.on('routeChangeError', NProgress.done);
 
 const App = ({ Component, pageProps }) => (
-    <Component {...pageProps} />
+    <>
+        <Head>
+            <title key='title'>{blogConfig.blogName || ''}</title>
+            <meta key='description' name='description' content={blogConfig.description} />
+        </Head>
+        <Component {...pageProps} />
+    </>
 );
 
 export default App;

@@ -1,6 +1,6 @@
 .footer {
     width: 100%;
-    padding: 10rem var(--horizontal-padding) 15rem var(--horizontal-padding);
+    padding: 10rem 0 15rem 0;
 }
 
 .wrapper {
@@ -11,6 +11,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+    padding: 0 var(--horizontal-padding);
     text-align: center;
 }
 

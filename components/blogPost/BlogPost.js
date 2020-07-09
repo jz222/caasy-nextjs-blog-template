@@ -34,7 +34,7 @@ const Post = ({ post }) => {
                 />
                 
                 <div className={styling.wrapper}>
-                    {post?.elements.map(element => {
+                    {(post?.elements || []).map(element => {
                         const Element = elements[element.type] || (() => null);
                         return <Element {...element} key={element.id} />;
                     })}

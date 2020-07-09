@@ -8,9 +8,20 @@ import config from '../../config/index';
 
 import styling from './BlogPost.module.scss';
 
+/**
+ * Renders a blog post. It dynamically determines the all the elements
+ * and renders their corresponding components.
+ * @param post {object} data of the blog post
+ * @returns {*}
+ * @constructor
+ */
 const Post = ({ post }) => {
+    // State
     const [lastEdit, setLastEdit] = useState('');
     
+    /**
+     * Formats the timestamp to the visitors format.
+     */
     useEffect(() => {
         setLastEdit(utils.formatTimestamp(post.updatedAt));
     }, [post.updatedAt]);
@@ -41,7 +52,6 @@ const Post = ({ post }) => {
                     
                     <i className={styling.lastEdit}>Last edit: {lastEdit}</i>
                 </div>
-            
             </article>
         </Main>
     );

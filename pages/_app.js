@@ -20,6 +20,15 @@ Router.events.on('routeChangeStart', NProgress.start);
 Router.events.on('routeChangeComplete', NProgress.done);
 Router.events.on('routeChangeError', NProgress.done);
 
+/**
+ * The component ensures that every site has title and meta element
+ * in the header. Additional meta tags can be added below. Make sure
+ * to add them als children of the Head component.
+ * @param Component {jsx} the component that is currently display
+ * @param pageProps {object} the currently active element's props
+ * @returns {*}
+ * @constructor
+ */
 const App = ({ Component, pageProps }) => (
     <>
         <Head>

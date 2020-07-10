@@ -2,12 +2,13 @@ import React from 'react';
 import caasy from '@caasy/sdk-js';
 
 import Main from '../components/layout/main/Main';
+import Author from '../components/author/Author';
 
 import blogConfig from '../blogConfig';
 
 const Authors = ({ authors }) => (
     <Main>
-        <h1>Authors</h1>
+        {(authors || []).map(author => <Author key={author.id} author={author} />)}
     </Main>
 );
 
@@ -22,14 +23,23 @@ export const getStaticProps = async () => {
     
     const totalPages = Math.ceil((firstPageOfAuthors.total || 0) / firstPageOfAuthors.itemsPerPage);
     
-    let allAuthors = [...firstPageOfAuthors.data];
+    let allAuthors = [...firstPageOfAuthors.data || []];
     
     for (let i = 2; i <= totalPages; i++) {
         const authors = await caasy.posts.getAllAuthors(2);
-        allAuthors = [...allAuthors, ...authors.date];
+        allAuthors = [...allAuthors, ...authors.data || []];
     }
     
-    return { props: { authors: allAuthors } };
+    const allAuthorsWithPosts = [];
+    
+    for (let author of allAuthors) {
+        const latestPosts = await caasy.posts.getAllByAuthor(author.id);
+        author.posts = latestPosts.data || [];
+        allAuthorsWithPosts.push(author);
+    }
+    
+    
+    return { props: { authors: allAuthorsWithPosts } };
 };
 
 export default Authors;

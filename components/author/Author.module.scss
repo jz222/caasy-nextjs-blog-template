@@ -1,8 +1,13 @@
 .posts {
-    width: 100%;
+    width: calc(100% + 4rem);
     display: flex;
     align-items: flex-start;
-    margin: 2rem 0 4rem 0;
-    padding: 2rem;
-    overflow: auto;
+    margin: 0 0 4rem var(--horizontal-negative-padding);
+    padding: 2rem 3rem 3.5rem 2rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }

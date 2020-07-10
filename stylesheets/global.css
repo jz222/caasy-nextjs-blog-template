@@ -67,6 +67,7 @@
     --max-width: 135rem;
     --max-post-width: 90rem;
     --horizontal-padding: 2rem;
+    --horizontal-negative-padding: -2rem;
     --navbar-height: 8rem;
     --border-radius: 15px;
 

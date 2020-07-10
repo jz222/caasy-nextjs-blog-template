@@ -63,7 +63,7 @@
 }
 
 .content {
-    padding: 4rem;
+    padding: 2.5rem;
 
     h2 {
         margin-bottom: 1.5rem;
@@ -92,5 +92,11 @@
             height: 2.2rem;
             background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--color-2) 50%);
         }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .content {
+        padding: 4rem;
     }
 }

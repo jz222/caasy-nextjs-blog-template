@@ -41,25 +41,13 @@ export const getStaticPaths = async () => {
     // in the entire app. However, when running "next export",
     // this configuration is not persisted and therefore it is
     // necessary to initialize the SDK every time before using it.
-    caasy.init({ siteId: blogConfig.caasySiteId });
+    caasy.init(blogConfig.caasySDKConfig);
     
-    // Load the first page of blog posts
-    const firstPageOfPosts = await caasy.posts.getAll();
-    
-    // Determine how many pages of blog posts exist
-    const totalPages = Math.ceil((firstPageOfPosts.total || 0) / 5);
-    
-    // Storing all the blog posts
-    let allPosts = [...firstPageOfPosts.data];
-    
-    // Fetch page by page until all blog posts were fetched
-    for (let i = 2; i <= totalPages; i++) {
-        const posts = await caasy.posts.getAll(i);
-        allPosts = [...allPosts, ...posts.data];
-    }
+    // Fetch all blog post IDs
+    const allBlogPostIds = await caasy.posts.getAllIds();
     
     // Get all IDs
-    const paths = allPosts.map(post => ({ params: { id: post.id } }));
+    const paths = allBlogPostIds.map(id => ({ params: { id } }));
     
     return {
         fallback: false,

@@ -46,7 +46,7 @@ export const getStaticProps = async (ctx) => {
     // in the entire app. However, when running "next export",
     // this configuration is not persisted and therefore it is
     // necessary to initialize the SDK every time before using it.
-    caasy.init({ siteId: blogConfig.caasySiteId });
+    caasy.init(blogConfig.caasySDKConfig);
     
     // Determine the page for which the blog posts should be shown
     const currentPage = +(ctx?.params?.currentPage || '1');

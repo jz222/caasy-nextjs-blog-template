@@ -13,7 +13,7 @@ import '../stylesheets/nprogress.css';
 
 // Initialize the Caasy SDK. Update the Caasy
 // site ID in "blogConfig.js" in the root folder.
-caasy.init({ siteId: blogConfig.caasySiteId });
+caasy.init(blogConfig.caasySDKConfig);
 
 // Loading indicator
 Router.events.on('routeChangeStart', NProgress.start);

@@ -9,7 +9,7 @@
         "export": "next build && next export"
     },
     "dependencies": {
-        "@caasy/sdk-js": "0.0.3-alpha",
+        "@caasy/sdk-js": "0.0.4-alpha",
         "next": "9.4.4",
         "nprogress": "^0.2.0",
         "react": "16.13.1",

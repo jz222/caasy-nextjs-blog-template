@@ -3,6 +3,7 @@ import caasy from '@caasy/sdk-js';
 import Index, { getStaticProps } from './';
 
 import blogPost from '../blogConfig';
+import blogConfig from '../blogConfig';
 
 export default Index;
 export { getStaticProps };
@@ -19,7 +20,7 @@ export const getStaticPaths = async () => {
     // in the entire app. However, when running "next export",
     // this configuration is not persisted and therefore it is
     // necessary to initialize the SDK every time before using it.
-    caasy.init({ siteId: blogPost.caasySiteId });
+    caasy.init(blogConfig.caasySDKConfig);
     
     // Fetches the first page of blog posts to use the metadata
     const data = await caasy.posts.getAll();

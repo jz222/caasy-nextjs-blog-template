@@ -6,6 +6,7 @@
     padding: 2rem 3rem 3.5rem 2rem;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    overflow: auto;
 
     &::-webkit-scrollbar {
         display: none;

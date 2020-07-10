@@ -25,4 +25,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    li {
+        margin-right: 3rem;
+        font-size: 1.8rem;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
 }

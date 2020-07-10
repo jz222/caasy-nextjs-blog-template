@@ -2,7 +2,6 @@ import caasy from '@caasy/sdk-js';
 
 import Index, { getStaticProps } from './';
 
-import blogPost from '../blogConfig';
 import blogConfig from '../blogConfig';
 
 export default Index;
@@ -26,7 +25,7 @@ export const getStaticPaths = async () => {
     const data = await caasy.posts.getAll();
     
     // Calculate how many pages of blog posts there are in total
-    const totalPages = Math.ceil((data.totalItems || 0) / 5);
+    const totalPages = Math.ceil((data.totalItems || 0) / data.itemsPerPage);
     
     // Prepare props for each of the site
     const paths = [];

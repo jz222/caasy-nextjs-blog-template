@@ -6,7 +6,7 @@ import config from '../../config/';
 
 import styling from './PostPreview.module.scss';
 
-const PostPreview = ({ id, previewImage, title, lastEdit, previewText }) => {
+const PostPreview = ({ id, previewImage, title, lastEdit, previewText, small }) => {
     const [lastEditDate, setLastEditDate] = useState('');
     
     useEffect(() => {
@@ -14,7 +14,7 @@ const PostPreview = ({ id, previewImage, title, lastEdit, previewText }) => {
     }, [lastEdit]);
     
     return (
-        <div className={styling.wrapper}>
+        <div className={small ? styling.wrapperSmall : styling.wrapper}>
             <Link href='/post/[id]' as={'/post/' + id}>
                 <article className={styling.post}>
                     <div

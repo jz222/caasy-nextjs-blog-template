@@ -7,6 +7,36 @@
     }
 }
 
+.wrapperSmall {
+    display: block;
+    margin-right: 4rem;
+
+    .post {
+        max-width: 40rem;
+    }
+
+    .header {
+        height: 12rem;
+    }
+
+    .content {
+        padding: 2rem;
+
+        div {
+            font-size: 1.2rem;
+        }
+
+        p {
+            height: 5.5rem;
+            font-size: 1.2rem;
+        }
+    }
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+
 .post {
     width: 100%;
     max-width: 65rem;
@@ -14,12 +44,11 @@
     border-radius: var(--border-radius);
     background-color: var(--color-2);
     box-shadow: var(--shadow);
-    transition: box-shadow 0.4s, transform 0.2s;
+    transition: box-shadow 0.4s;
     overflow: hidden;
     cursor: pointer;
 
     &:hover {
-        transform: scale(1.002);
         box-shadow: var(--shadow-stronger);
     }
 }

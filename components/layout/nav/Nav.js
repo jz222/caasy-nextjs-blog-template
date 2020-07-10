@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 import Logo from '../../logo/Logo';
 
@@ -15,9 +16,17 @@ const Nav = () => (
             <Logo />
             
             <ul className={styling.menu}>
-                <li>1</li>
-                <li>1</li>
-                <li>1</li>
+                <li>
+                    <Link href='/'>
+                        <a>Posts</a>
+                    </Link>
+                </li>
+                
+                <li>
+                    <Link href='/authors'>
+                        <a>Authors</a>
+                    </Link>
+                </li>
             </ul>
         </div>
     </nav>

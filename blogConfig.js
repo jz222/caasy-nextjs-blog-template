@@ -8,7 +8,7 @@
  */
 export default {
     caasySDKConfig: {
-        siteId: '5f05b799985d5565e182692'
+        siteId: '5f05b799985d5565e1826922'
     },
     blogName: 'myBlog',
     defaultTitle: 'my personal tech blog',

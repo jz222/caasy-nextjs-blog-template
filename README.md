@@ -1,5 +1,7 @@
 # Caasy Blog Template
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/66dc26e9-9676-4b22-adf3-04d7e78c30cd/deploy-status)](https://app.netlify.com/sites/upbeat-murdock-8a397d/deploys)
+
 This repository contains a NextJS blog template that renders all the content from Caasy - a headless content as a service. It demonstrates how to implement the official Caasy Javascript SDK.
 
 🚀 [Live Preview](https://upbeat-murdock-8a397d.netlify.app/)

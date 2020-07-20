@@ -4,7 +4,7 @@ import Main from '../layout/main/Main';
 
 import utils from '../../utils/';
 import elements from '../elements/index';
-import config from '../../config/index';
+import blogConfig from '../../blogConfig';
 
 import styling from './BlogPost.module.scss';
 
@@ -27,7 +27,7 @@ const Post = ({ post }) => {
     }, [post.updatedAt]);
     
     return (
-        <Main title={post.title[config.locale]}>
+        <Main title={post.title[blogConfig.locale]}>
             <div className={styling.header} hidden={!post.previewImageUrls}>
                 <img
                     src={post?.previewImageUrls?.medium || ''}

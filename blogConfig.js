@@ -13,7 +13,14 @@ export default {
     blogName: 'myBlog',
     defaultTitle: 'my personal tech blog',
     description: 'This blog showcases how to use Caasy and its official JS SDK. Please visit our website for more information. Caasy is developed and maintained by Mosaic.',
+    // The default language is used to improve accessibility.
+    // It is set on the HTML element. You can change this
+    // to the main language of your content.
     defaultLanguage: 'en',
+    // The locale is used for multi language content. This
+    // feature hasn't been released yet. Please don't change
+    // this until Caasy fully supports multi language content.
+    locale: 'en_US',
     social: {
         github: 'https://github.com/jz222',
         dev: 'https://dev.to/jz222',

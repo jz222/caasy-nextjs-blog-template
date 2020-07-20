@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 import utils from '../../utils/';
-import config from '../../config/';
+import blogConfig from '../../blogconfig';
 
 import styling from './PostPreview.module.scss';
 
@@ -26,11 +26,11 @@ const PostPreview = ({ id, previewImage, title, lastEdit, previewText, small }) 
                     <div className={styling.content}>
                         <h2>
                             <Link href='/post/[id]' as={'/post/' + id}>
-                                <a>{title?.[config.locale]}</a>
+                                <a>{title?.[blogConfig.locale]}</a>
                             </Link>
                         </h2>
                         
-                        <p>{previewText?.[config.locale]}</p>
+                        <p>{previewText?.[blogConfig.locale]}</p>
                         <div>Last edit: {lastEditDate}</div>
                     </div>
                 </article>

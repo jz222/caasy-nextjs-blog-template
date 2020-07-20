@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 
 import utils from '../../utils/';
-import blogConfig from '../../blogconfig';
+import blogConfig from '../../blogConfig';
 
 import styling from './PostPreview.module.scss';
 

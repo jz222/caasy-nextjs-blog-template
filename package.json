@@ -9,7 +9,7 @@
         "export": "next build && next export"
     },
     "dependencies": {
-        "@caasy/sdk-js": "0.0.5-alpha",
+        "@caasy/sdk-js": "0.0.6-alpha",
         "dompurify": "^2.0.12",
         "highlight.js": "^10.1.1",
         "marked": "^1.1.1",

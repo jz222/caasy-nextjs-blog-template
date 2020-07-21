@@ -6,6 +6,12 @@ This repository contains a NextJS blog template that renders all the content fro
 
 ### 🚀 [Live Preview](https://upbeat-murdock-8a397d.netlify.app/)
 
+### 🌐 [Caasy Website](https://caasy.io)
+
+### 📘 [Caasy Documentation](https://docs.caasy.io)
+
+<br>
+
 ## Setup ⚙️
 
 Before you start, please set your Caasy site ID in `blogConfig.js`.
@@ -32,19 +38,19 @@ This will create a folder `out` with all generated static sites.
 
 ## Customization 🎨
 
-### Colors
+#### Colors
 
-All the colors rely on the CSS variables defined in `stylesheets/global.css`. Feel free to change the color codes there. Darkmode is currently not supported. Contributions are welcome, though.
+All the colors rely on the CSS variables defined in `stylesheets/global.css`. Feel free to change the color codes there. Darkmode is currently not supported. Contributions are welcome, though. This template uses Highlight.js to highlight code snippets. The default theme for code highlighting is `Night Owl`. If you like to use a [different theme](https://github.com/highlightjs/highlight.js/tree/master/src/styles), you can replace the theme in `stylesheets/nightOwl.css`, which is imported in `_app.js_`.
 
-### Static content
+#### Static content
 
 The actual blog posts are fetched from Caasy using the official Caasy Javascript SDK. However, there is also static information such as the name of your blog or your social media links. This type of information can be edited in the `blogConfig.js`, which you can find in the root folder.
 
-### Logo
+#### Logo
 
 The logo is used in the navigation bar as well as in the footer. To change the logo, update the logo component in `components/logo/`.
 
-## Supported Elements
+### Supported Elements
 
 Caasy continuously adds new elements. Therefore, this template might not support all of them. The following elements are currently supported:
 

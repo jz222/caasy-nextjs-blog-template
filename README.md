@@ -42,7 +42,7 @@ This will create a folder `out` with all generated static sites.
 
 #### Colors
 
-All the colors rely on the CSS variables defined in `stylesheets/global.css`. Feel free to change the color codes there. Darkmode is currently not supported. Contributions are welcome, though. This template uses Highlight.js to highlight code snippets. The default theme for code highlighting is `Night Owl`. If you like to use a [different theme](https://github.com/highlightjs/highlight.js/tree/master/src/styles), you can replace the theme in `stylesheets/nightOwl.css`, which is imported in `_app.js_`.
+All the colors rely on the CSS variables defined in `stylesheets/global.css`. Feel free to change the color codes there. Darkmode is currently not supported. Contributions are welcome, though. This template uses Highlight.js to highlight code snippets. The default theme for code highlighting is `Night Owl`. If you would like to use a [different theme](https://github.com/highlightjs/highlight.js/tree/master/src/styles), you can replace the theme in `stylesheets/nightOwl.css`, which is imported in `_app.js`.
 
 #### Static content
 

@@ -8,7 +8,7 @@ This repository contains a NextJS blog template that renders all the content fro
 
 ### 🌐 [Caasy Website](https://caasy.io)
 
-### 📘 [Caasy Documentation](https://docs.caasy.io)
+### 📚 [Caasy Documentation](https://docs.caasy.io)
 
 <br>
 
@@ -36,6 +36,8 @@ npm run export
 
 This will create a folder `out` with all generated static sites.
 
+#### 📘 [Full step-by-step guide](https://docs.caasy.io)
+
 ## Customization 🎨
 
 #### Colors
@@ -50,14 +52,14 @@ The actual blog posts are fetched from Caasy using the official Caasy Javascript
 
 The logo is used in the navigation bar as well as in the footer. To change the logo, update the logo component in `components/logo/`.
 
-### Supported Elements
+## Supported Elements
 
 Caasy continuously adds new elements. Therefore, this template might not support all of them. The following elements are currently supported:
 
 - container
 - headline
 - image
-- markdown: sanitized and highlighted 🔥
+- markdown: sanitized and highlighted 🔒
 - rich text
 - text
 

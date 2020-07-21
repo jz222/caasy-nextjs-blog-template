@@ -10,6 +10,7 @@ import blogConfig from '../blogConfig';
 // Import style sheets
 import '../stylesheets/global.css';
 import '../stylesheets/nprogress.css';
+import '../stylesheets/nightOwl.css';
 
 // Initialize the Caasy SDK. Update the Caasy
 // site ID in "blogConfig.js" in the root folder.

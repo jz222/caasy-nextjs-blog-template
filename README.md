@@ -4,13 +4,33 @@
 
 This repository contains a NextJS blog template that renders all the content from Caasy - a headless content as a service. It demonstrates how to implement the official Caasy Javascript SDK.
 
-🚀 [Live Preview](https://upbeat-murdock-8a397d.netlify.app/)
+### 🚀 [Live Preview](https://upbeat-murdock-8a397d.netlify.app/)
 
-## Setup
+## Setup ⚙️
 
 Before you start, please set your Caasy site ID in `blogConfig.js`.
 
-## Customization
+**Install dependencies**
+
+```
+npm i
+```
+
+**Start development server**
+
+```
+npm run dev
+```
+
+**Generate static sites**
+
+```
+npm run export
+```
+
+This will create a folder `out` with all generated static sites.
+
+## Customization 🎨
 
 ### Colors
 
@@ -31,16 +51,16 @@ Caasy continuously adds new elements. Therefore, this template might not support
 - container
 - headline
 - image
-- markdown
+- markdown: sanitized and highlighted 🔥
 - rich text
 - text
 
 Each element is rendered by its respective component. You can find them in `components/elements/`. Feel free to adjust them to your needs.
 
-## Contributions
+## Contributions 🤟
 
 This template is free for everyone and it should evolve together with Caasy. If you improve the template or add any kind of functionality and would like to share it with others, feel free to open a pull request.
 
-## License
+## License 🤝
 
 Feel free to use this template and adapt it to your needs. It's not mandatory but we would appreciate it, if you gave us credit.

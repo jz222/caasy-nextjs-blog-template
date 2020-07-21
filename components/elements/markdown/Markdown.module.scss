@@ -12,6 +12,22 @@
         color: var(--color-2-dark);
     }
 
+    p code {
+        padding: 0.2rem 0.5rem;
+        border-radius: 7px;
+        background-color: var(--color-2-darker);
+        font-family: monospace;
+        font-size: 2rem;
+        color: var(--color-1);
+    }
+
+    pre code {
+        padding: 2.5rem;
+        border-radius: var(--border-radius);
+        background-color: var(--color-1);
+        font-weight: 500;
+    }
+
     h2,
     h3,
     h4,

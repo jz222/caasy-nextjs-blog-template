@@ -10,6 +10,8 @@
     },
     "dependencies": {
         "@caasy/sdk-js": "0.0.5-alpha",
+        "dompurify": "^2.0.12",
+        "highlight.js": "^10.1.1",
         "marked": "^1.1.1",
         "next": "9.4.4",
         "nprogress": "^0.2.0",

@@ -52,7 +52,7 @@ The actual blog posts are fetched from Caasy using the official Caasy Javascript
 
 The logo is used in the navigation bar as well as in the footer. To change the logo, update the logo component in `components/logo/`.
 
-## Supported Elements
+## Supported Elements 💡
 
 Caasy continuously adds new elements. Therefore, this template might not support all of them. The following elements are currently supported:
 

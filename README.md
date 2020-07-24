@@ -70,6 +70,8 @@ Each element is rendered by its respective component. You can find them in `comp
 
 This template is free for everyone and it should evolve together with Caasy. If you improve the template or add any kind of functionality and would like to share it with others, feel free to open a pull request.
 
+Please refer to [existing pull requests](https://github.com/jz222/caasy-nextjs-blog-template/pull/2/files) for examples on how to add new elements.
+
 ## License 🤝
 
 Feel free to use this template and adapt it to your needs. It's not mandatory but we would appreciate it, if you gave us credit.

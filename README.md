@@ -62,6 +62,7 @@ Caasy continuously adds new elements. Therefore, this template might not support
 - markdown: sanitized and highlighted 🔒
 - rich text
 - text
+- youtube
 
 Each element is rendered by its respective component. You can find them in `components/elements/`. Feel free to adjust them to your needs.
 

@@ -4,7 +4,7 @@
 
 This repository contains a NextJS blog template that renders all the content from Caasy - a headless content as a service. It demonstrates how to implement the official Caasy Javascript SDK.
 
-### 🚀 [Live Preview](https://upbeat-murdock-8a397d.netlify.app/)
+### 🚀 [Live Preview](https://demo-blog.caasy.io)
 
 ### 🌐 [Caasy Website](https://caasy.io)
 

@@ -1,8 +1,9 @@
 .youtube {
     position: relative;
     width: 100%;
-    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
     padding-top: 56.25%;
+    border-radius: var(--border-radius);
     overflow: hidden;
 
     iframe {

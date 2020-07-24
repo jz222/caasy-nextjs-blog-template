@@ -183,6 +183,10 @@ img {
     border-style: none;
 }
 
+iframe {
+    border: none;
+}
+
 p {
     line-height: 1.5;
     color: var(--color-2-dark);

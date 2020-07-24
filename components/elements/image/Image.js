@@ -4,12 +4,13 @@ import styling from './Image.module.scss';
 
 /**
  * Renders an image element.
- * @param fileName {string} name of the image.
+ * @param imageUrls {object} image URL of all available sizes
+ * @param imageName {string} name of the image.
  * @returns {*}
  * @constructor
  */
-const Image = ({ fileName }) => (
-    <img src={'https://storage.googleapis.com/caasy-media-thumbnails/800x800_' + fileName} className={styling.image} alt={fileName} />
+const Image = ({ imageUrls, imageName }) => (
+    <img src={imageUrls.medium} className={styling.image} alt={imageName} />
 );
 
 export default Image;

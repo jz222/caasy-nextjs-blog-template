@@ -66,6 +66,11 @@ Caasy continuously adds new elements. Therefore, this template might not support
 
 Each element is rendered by its respective component. You can find them in `components/elements/`. Feel free to adjust them to your needs.
 
+Not supported yet:
+
+- card
+- file
+
 ## Contributions 🤟
 
 This template is free for everyone and it should evolve together with Caasy. If you improve the template or add any kind of functionality and would like to share it with others, feel free to open a pull request.
